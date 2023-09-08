@@ -1,4 +1,5 @@
 import React from 'react';
+import { v4 } from 'uuid';
 import CoffeeList from './CoffeeList';
 import CoffeeDetail from './CoffeeDetail';
 import NewCoffeeForm from './NewCoffeeForm';
@@ -20,7 +21,8 @@ class CoffeeControl extends React.Component {
                     roast: 'Medium',
                     notes: 'Chocolate, Caramel, and Citrus',
                     price: 12.99,
-                    stock: 10
+                    stock: 10,
+                    id: v4()
                 },
                 {
                     name: 'Ethiopian',
@@ -78,7 +80,7 @@ class CoffeeControl extends React.Component {
             buttonText = "Return to Coffee List";
 
         } else if (this.state.formVisibleOnPage) {
-            currentlyVisibleState = <NewCoffeeForm onNewCoffeeCreation={this.handleAddingNewCoffeeToList} />
+            currentlyVisibleState = <NewCoffeeForm onNewCoffeeCreate={this.handleAddingNewCoffeeToList} />
             buttonText = "Return to Coffee List";
     
         } else {
