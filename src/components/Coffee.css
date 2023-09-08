@@ -1,0 +1,10 @@
+.coffee {
+    padding: 10px;
+}
+
+.coffee:hover {
+    transform: scale(1.01);
+    transition: transform 0.01s ease;
+    background-color: aliceblue;
+    border: 1px dotted black;
+}

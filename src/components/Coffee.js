@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import './Coffee.css';
 
 function Coffee(props) {
     return (
@@ -12,7 +13,7 @@ function Coffee(props) {
                 <p>${props.price} per 130lb bag</p>
                 <p>In stock: 
                     {props.stock > 0 ? ` ${props.stock * 130} lbs || ${props.stock} bags` : <span style={{color: 'red'}}> OUT OF STOCK</span>}
-                    {props.stock > 0 && props.stock <= 3 ? <span style={{color: 'orange'}}> LOW STOCK</span> : null}
+                    {props.stock > 0 && props.stock < 10 ? <span style={{color: 'orange'}}> LOW STOCK</span> : null}
                 </p>
 
 
