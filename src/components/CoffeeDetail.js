@@ -5,13 +5,15 @@ function Coffee(props) {
     return (
         <React.Fragment>
             <div className="coffee">
-                <h3>{props.name}</h3>
+                <h1>{props.name}</h1>
                 <p>{props.origin}</p>
                 <p>{props.roast}</p>
                 <p>{props.notes}</p>
                 <p>{props.price}</p>
                 <p>{props.stock}</p>
             </div>
+
+            <button onClick={() => props.onClickingEdit}>Edit</button>
         </React.Fragment>
     );
 }
