@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import './CoffeeDetail.css';
+import { Eraser, Tag } from '@phosphor-icons/react';
 
 function Coffee(props) {
 
@@ -21,8 +22,12 @@ function Coffee(props) {
 
             </div>
 
-            <button onClick={() => props.onClickingEdit()}>Edit</button>
-            <button onClick={() => props.onSellingCoffee(coffee.id)}>Sell</button>
+            <button onClick={() => props.onClickingEdit()}>
+                <span className="button-content"><Eraser size={25} />Edit </span>
+            </button>
+            <button onClick={() => props.onSellingCoffee(coffee.id)}>
+                <span className="button-content"><Tag size={25} />Sell </span>
+            </button>
         </React.Fragment>
     );
 }

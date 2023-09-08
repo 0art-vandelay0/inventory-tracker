@@ -15,10 +15,6 @@ function Coffee(props) {
                     {props.stock > 0 ? ` ${props.stock * 130} lbs || ${props.stock} bags` : <span style={{color: 'red'}}> OUT OF STOCK</span>}
                     {props.stock > 0 && props.stock < 10 ? <span style={{color: 'orange'}}> LOW STOCK</span> : null}
                 </p>
-
-
-
-
             </div>
         </React.Fragment>
     );

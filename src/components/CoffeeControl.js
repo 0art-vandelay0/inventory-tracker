@@ -4,6 +4,7 @@ import CoffeeList from './CoffeeList';
 import CoffeeDetail from './CoffeeDetail';
 import NewCoffeeForm from './NewCoffeeForm';
 import EditCoffeeForm from './EditCoffeeForm';
+import { Rewind, PlusSquare } from '@phosphor-icons/react';
 
 
 class CoffeeControl extends React.Component {
@@ -105,6 +106,7 @@ class CoffeeControl extends React.Component {
     render () {
         let currentlyVisibleState = null;
         let buttonText = null;
+        let buttonIcon = null; 
     
         if (this.state.editing) {
             currentlyVisibleState = 
@@ -112,6 +114,7 @@ class CoffeeControl extends React.Component {
                     coffee={this.state.selectedCoffee} 
                     onEditCoffee={this.handleEditCoffeeFormSubmission} 
                 />
+            buttonIcon = <Rewind size={24} />;
             buttonText = "Return to Coffee List";
         
         } else if (this.state.selectedCoffee != null) {
@@ -121,6 +124,7 @@ class CoffeeControl extends React.Component {
                     onClickingEdit={this.handleEditClick}
                     onSellingCoffee={this.handleSoldCoffee}
                 />
+            buttonIcon = <Rewind size={24} />;
             buttonText = "Return to Coffee List";
 
         } else if (this.state.formVisibleOnPage) {
@@ -128,6 +132,7 @@ class CoffeeControl extends React.Component {
                 <NewCoffeeForm 
                     onNewCoffeeCreate={this.handleAddingNewCoffeeToList} 
                 />
+            buttonIcon = <Rewind size={24} />;
             buttonText = "Return to Coffee List";
     
         } else {
@@ -136,13 +141,15 @@ class CoffeeControl extends React.Component {
                 coffeeList={this.state.coffeeList} 
                 onCoffeeSelection={this.handleChangingSelectedCoffee}
             />;
+            buttonIcon = <PlusSquare size={24} />;
             buttonText = "Add Coffee";
         }
     
         return (
             <React.Fragment>
                 {currentlyVisibleState}
-                <button onClick={this.handleClick}>{buttonText}</button>
+                <button className="button-content" onClick={this.handleClick}>  {buttonIcon} {buttonText}
+                </button>
             </React.Fragment>
         );
     }
