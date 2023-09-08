@@ -16,7 +16,7 @@ function Coffee(props) {
                 <p>{coffee.stock}</p>
             </div>
 
-            <button onClick={() => props.onClickingEdit}>Edit</button>
+            <button onClick={() => props.onClickingEdit()}>Edit</button>
         </React.Fragment>
     );
 }
