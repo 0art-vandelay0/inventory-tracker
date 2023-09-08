@@ -22,7 +22,8 @@ Coffee.propTypes = {
     roast: PropTypes.string.isRequired,
     notes: PropTypes.string.isRequired,
     price: PropTypes.number.isRequired,
-    stock: PropTypes.number.isRequired
+    stock: PropTypes.number.isRequired,
+    id: PropTypes.string
 };
 
 export default Coffee;
