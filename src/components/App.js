@@ -1,12 +1,14 @@
 import './App.css';
 import Header from './Header'
+import CoffeeControl from './CoffeeControl'
+import React from 'react';
 
 function App() {
     return (
-        <div className="App">
-            <Header />
-            {/* <CoffeeControl /> */}
-        </div>
+    <React.Fragment>
+        <Header />
+        {/* <CoffeeControl /> */}
+    </React.Fragment>
     );
 }
 
