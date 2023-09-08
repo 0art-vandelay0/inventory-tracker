@@ -12,11 +12,16 @@ function Coffee(props) {
                 <p>{coffee.origin}</p>
                 <p>{coffee.roast}</p>
                 <p>{coffee.notes}</p>
-                <p>{coffee.price}</p>
-                <p>{coffee.stock}</p>
+                <p>${coffee.price} (per bag)</p>
+                <p>In Stock: 
+                    {coffee.stock > 0 ? coffee.stock : <span style={{color: 'red'}}> OUT OF STOCK</span>}
+                    {coffee.stock > 0 && coffee.stock <= 3 ? <span style={{color: 'orange'}}> LOW STOCK</span> : null}
+                </p>
+
             </div>
 
             <button onClick={() => props.onClickingEdit()}>Edit</button>
+            <button onClick={() => props.onSellingCoffee(coffee.id)}>Sell</button>
         </React.Fragment>
     );
 }
