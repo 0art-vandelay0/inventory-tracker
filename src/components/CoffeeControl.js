@@ -1,4 +1,8 @@
 import React from 'react';
+import CoffeeList from './CoffeeList';
+import CoffeeDetail from './CoffeeDetail';
+import NewCoffeeForm from './NewCoffeeForm';
+import EditCoffeeForm from './EditCoffeeForm';
 
 
 class CoffeeControl extends React.Component {
@@ -38,6 +42,27 @@ class CoffeeControl extends React.Component {
         }
     }
 
+    render () {
+        let currentlyVisibleState = null;
+        let buttonText = null;
+    
+        if (this.state.selectedCoffee != null) {
+            currentlyVisibleState = <CoffeeDetail coffee={this.state.selectedCoffee} />
+            buttonText = "Return to Coffee List";
+    
+        } else {
+            currentlyVisibleState = <CoffeeList coffeeList={this.state.coffeeList} />;
+            buttonText = "Add Coffee";
+        }
+    
+        return (
+            <React.Fragment>
+                {currentlyVisibleState}
+                <button onClick={this.handleClick}>{buttonText}</button>
+            </React.Fragment>
+        );
+    }
 }
+
 
 export default CoffeeControl;
