@@ -12,7 +12,7 @@ label {
     font-weight: bold;;
 }
 
-/* button {
+button {
     background-color: #4CAF50;
     display: block;
     color: white;
@@ -21,4 +21,4 @@ label {
     border: none;
     cursor: pointer;
     width: 30%;
-} */
+}
