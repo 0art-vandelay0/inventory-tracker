@@ -2,15 +2,18 @@ import React from "react";
 import PropTypes from "prop-types";
 
 function Coffee(props) {
+
+    const {coffee} = props;
+
     return (
         <React.Fragment>
             <div className="coffee">
-                <h1>{props.name}</h1>
-                <p>{props.origin}</p>
-                <p>{props.roast}</p>
-                <p>{props.notes}</p>
-                <p>{props.price}</p>
-                <p>{props.stock}</p>
+                <h1>{coffee.name}</h1>
+                <p>{coffee.origin}</p>
+                <p>{coffee.roast}</p>
+                <p>{coffee.notes}</p>
+                <p>{coffee.price}</p>
+                <p>{coffee.stock}</p>
             </div>
 
             <button onClick={() => props.onClickingEdit}>Edit</button>
@@ -19,12 +22,8 @@ function Coffee(props) {
 }
 
 Coffee.propTypes = {
-    name: PropTypes.string.isRequired,
-    origin: PropTypes.string.isRequired,
-    roast: PropTypes.string.isRequired,
-    notes: PropTypes.string.isRequired,
-    price: PropTypes.number.isRequired,
-    stock: PropTypes.number.isRequired
+    coffee: PropTypes.object,
+    onClickingEdit: PropTypes.func
 };
 
 export default Coffee;
