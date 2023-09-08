@@ -30,7 +30,8 @@ class CoffeeControl extends React.Component {
                     roast: 'Light',
                     notes: 'Blueberry, Lemon, and Jasmine',
                     price: 14.99,
-                    stock: 10
+                    stock: 10,
+                    id: v4()
                 },
                 {
                     name: 'Sumatra',
@@ -38,7 +39,8 @@ class CoffeeControl extends React.Component {
                     roast: 'Dark',
                     notes: 'Cedar, Earth, and Tobacco',
                     price: 13.99,
-                    stock: 10
+                    stock: 10,
+                    id: v4()
                 }
             ]
         }
