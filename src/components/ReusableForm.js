@@ -42,7 +42,12 @@ function ReusableForm(props) {
                     name='stock'
                     placeholder='Stock'
                     defaultValue={props.stock || ''} />
-                <button class="coffee-bean" type='submit'>{props.buttonText}</button>
+                <button type='submit'>
+                    <span className="button-content">
+                        {props.icon && props.icon}
+                        {props.buttonText}
+                    </span>
+                </button>
             </form>
         </React.Fragment>
     );
@@ -50,7 +55,8 @@ function ReusableForm(props) {
 
 ReusableForm.propTypes = {
     formSubmissionHandler: PropTypes.func,
-    buttonText: PropTypes.string
+    buttonText: PropTypes.string,
+    icon: PropTypes.element
 };
 
 export default ReusableForm;

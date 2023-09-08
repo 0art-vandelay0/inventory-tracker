@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
 import { v4 } from 'uuid';
+import { PlusCircle } from '@phosphor-icons/react';
 
 function NewCoffeeForm (props) {
 
@@ -22,7 +23,8 @@ function NewCoffeeForm (props) {
         <React.Fragment>
             <ReusableForm
                 formSubmissionHandler={handleNewCoffeeFormSubmission}
-                buttonText="Add Coffee to Menu" />
+                buttonText="Add New Coffee"
+                icon={<PlusCircle style={{ marginRight: '8px' }} size={25} />} />
         </React.Fragment>
     );
 }

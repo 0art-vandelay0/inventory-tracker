@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import ReusableForm from "./ReusableForm";
+import { ClockClockwise } from '@phosphor-icons/react';
 
 function EditCoffeeForm(props) {
     const { coffee } = props;
@@ -26,6 +27,7 @@ function EditCoffeeForm(props) {
             <ReusableForm
                 formSubmissionHandler={handleEditCoffeeFormSubmission}
                 buttonText="Update Coffee"
+                icon={<ClockClockwise  style={{ marginRight: '8px' }} size={25} />}
                 name={coffee.name}
                 origin={coffee.origin}
                 roast={coffee.roast}
