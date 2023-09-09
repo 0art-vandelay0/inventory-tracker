@@ -35,6 +35,7 @@ function ReusableForm(props) {
                     type='number'
                     name='price'
                     placeholder='Price'
+                    step="0.01"
                     defaultValue={props.price || ''} />
                 <label htmlFor='stock'>Stock</label>
                 <input
