@@ -3,10 +3,13 @@ import PropTypes from "prop-types";
 import Coffee from "./Coffee";
 
 function CoffeeList(props) {
+
+    const sortedCoffeeList = [...props.coffeeList].sort((a, b) => a.name.localeCompare(b.name));
+
     return (
         <React.Fragment>
             <hr />
-            {props.coffeeList.map((coffee) =>
+            {sortedCoffeeList.map((coffee) =>
                 <Coffee
                     whenCoffeeClicked={props.onCoffeeSelection}
                     name={coffee.name}
