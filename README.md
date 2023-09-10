@@ -55,7 +55,6 @@ This is a simple inventory tracking React web application with Create, Read, and
 ## **Known Bugs**
 
 -   Currently no DELETE functionality to delete products.
--   Currently no option to directly increment stock without using 'Edit'. To add stock: use the 'Edit' option in the details view and adjust the stock as necessary.
 
 ## Available Scripts
 
