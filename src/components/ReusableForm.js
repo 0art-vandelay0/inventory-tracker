@@ -8,41 +8,55 @@ function ReusableForm(props) {
             <form onSubmit={props.formSubmissionHandler}>
                 <label htmlFor='name'>Name</label>
                 <input
+                    id='name'
                     type='text'
                     name='name'
                     placeholder='Coffee Name'
-                    defaultValue={props.name || ''} />
+                    defaultValue={props.name || ''}  
+                    required />
                 <label htmlFor='origin'>Origin</label>
                 <input
+                    id='origin'
                     type='text'
                     name='origin'
                     placeholder='Origin'
-                    defaultValue={props.origin || ''} />
+                    defaultValue={props.origin || ''} 
+                    required />
                 <label htmlFor='roast'>Roast</label>
                 <input
+                    id='roast'
                     type='text'
                     name='roast'
                     placeholder='Roast'
-                    defaultValue={props.roast || ''} />
+                    defaultValue={props.roast || ''} 
+                    required />
                 <label htmlFor='notes'>Notes</label>
                 <input
+                    id='notes'
                     type='text'
                     name='notes'
                     placeholder='Notes'
-                    defaultValue={props.notes || ''} />
+                    defaultValue={props.notes || ''}  
+                    required />
                 <label htmlFor='price'>Price</label>
                 <input
+                    id='price'
                     type='number'
                     name='price'
                     placeholder='Price'
                     step="0.01"
-                    defaultValue={props.price || ''} />
+                    min='0'
+                    defaultValue={props.price || ''}  
+                    required />
                 <label htmlFor='stock'>Stock</label>
                 <input
+                    id='stock'
                     type='number'
                     name='stock'
                     placeholder='Stock'
-                    defaultValue={props.stock || ''} />
+                    min='0'
+                    defaultValue={props.stock || ''}  
+                    required />
                 <button type='submit'>
                     <span className="button-content">
                         {props.icon && props.icon}
